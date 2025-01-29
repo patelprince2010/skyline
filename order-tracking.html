@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order | Skyline Shopper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="website icon" type="png " href="images/logo2 - Copy.png">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container1 {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .order-id-input {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .order-id-input input {
+      width: 70%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .order-id-input button {
+      padding: 12px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #FF9900;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .order-id-input button:hover {
+      background-color: #e6891d;
+    }
+
+    .status-container {
+      display: none;
+    }
+
+    .status-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .status-item span {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .order-details {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .order-items {
+      margin-top: 15px;
+    }
+
+    .order-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .order-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 4px;
+      margin-right: 15px;
+    }
+
+    .order-item p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo2.png" width="300px"></a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+  <div class="container1">
+    <h1>Track Your Order</h1>
+    <div class="order-id-input">
+      <input type="text" id="order-id-input" placeholder="Enter Order ID">
+      <button onclick="trackOrder()">Track Order</button>
+    </div>
+    <div id="status-container" class="status-container">
+      <div id="status-list"></div>
+    </div>
+    <div id="order-details" class="order-details">
+      <h2>Order Details</h2>
+      <div id="order-items" class="order-items"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App For Android and iOS Mobile Phones.</p>
+                <div class="app-logo">
+                    <a href="https://play.google.com/store" target="_blank">
+                        <img src="images/play-store.png">
+                    </a>
+                    <a href="https://www.apple.com/app-store/" target="_blank">
+                        <img src="images/app-store.png" alt="App Store">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo3white.png">
+                <p>Our Purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p>
+            </div>
+            <div class="footer-col-3">
+              <h3>Useful Links</h3>
+              <ul>
+                  <li><a href="">Coupons</a></li>
+                  <li><a href="">Blog Post</a></li>
+                  <li><a href="">Return Policy</a></li>
+                  <li><a href="">Join Affiliate</a></li>
+              </ul>
+          </div>
+          <div class="footer-col-3">
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                  <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                  <li><a href="https://www.instagram.com/patel_pujan_18/" target="_blank">Instagram</a></li>
+                  <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+              </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2024 - Skyline Shopper</p>
+    </div>
+</div>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    function menutoggle() {
+        let menu = document.getElementById('MenuItems');
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+});
+
+function menutoggle() {
+            let menu = document.getElementById('MenuItems');
+            menu.classList.toggle('show'); // Toggle the 'show' class
+        }
+
+    async function trackOrder()
+    {
+      const orderId = document.getElementById('order-id-input').value.trim();
+      if (!orderId) {
+        alert('Please enter a valid Order ID.');
+        return;
+      }
+
+      try 
+      {
+        const response = await fetch(`http://localhost:3000/getOrder/${orderId}`);
+        const data = await response.json();
+
+        if (data.success)
+        {
+          const order = data.order;
+
+          // Display order status
+          const statusContainer = document.getElementById('status-container');
+          const statusList = document.getElementById('status-list');
+          statusContainer.style.display = 'block';
+
+          statusList.innerHTML = `
+            <div class="status-item">
+              <span>Order Status:</span>
+              <span>${order.orderStatus}</span>
+            </div>
+          `;
+
+          // Display order details
+          const orderDetails = document.getElementById('order-details');
+          const orderItems = document.getElementById('order-items');
+          orderDetails.style.display = 'block';
+          orderItems.innerHTML = '';
+
+          order.items.forEach((item) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('order-item');
+            itemDiv.innerHTML = `
+              <img src="${item.image || 'default.jpg'}" alt="${item.name}">
+              <div>
+                <p><strong>${item.name}</strong></p>
+                <p>Price: ₹${item.price}</p>
+                <p>Quantity: ${item.quantity}</p>
+              </div>
+            `;
+            orderItems.appendChild(itemDiv);
+          });
+        } else {
+          alert(data.message);
+        }
+      }  catch (error)
+      {
+        console.error('Error tracking order:', error);
+        alert('An error occurred while tracking the order.');
+      }
+    }
+  </script>
+</body>
+</html>

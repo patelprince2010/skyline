@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Skyline Shopper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="website icon" type="png " href="images/logo2 - Copy.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo2.png" width="300px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort By Price</option>
+                <option>Sort By Popularity</option>
+                <option>Sort By Rating</option>
+                <option>Sort By Sale</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-1.png"></a> 
+                <a href="product-details.html"><h4>Nike Revolution Running Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>₹3699</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Revolution Running Shoes', 3699, 'images/product-1.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Revolution Running Shoes', 3699,  'images/product-1.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-2.html"><img src="images/product-2.png"></a>
+                <a href="product-2.html"><h4>Nike Air Max Men Shoes</h4></a><br>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>₹7999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Air Max Men Shoes', 7999,  'images/product-2.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Air Max Men Shoes', 7999,  'images/product-2.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-3.html"><img src="images/product-3.png"></a>
+                <a href="product-3.html"><h4>Nike Air Max Alpha Workout Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>₹7399</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Air Max Alpha Workout Shoes', 7399,  'images/product-3.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Air Max Alpha Workout Shoes', 7399,'images/product-3.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-4.html"><img src="images/product-4.png"></a>
+                <a href="product-4.html"><h4>Nike Juniper Trail 3 Running Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>₹7499</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Juniper Trail 3 Running Shoes', 7499,  'images/product-4.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Juniper Trail 3 Running Shoes', 7499,  'images/product-4.png')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-4">
+                <a href="product-5.html"><img src="images/product-5.png"></a>
+                <a href="product-5.html"><h4>Nike MEN CITY 'Coveralls' Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>₹8699</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike MEN CITY Coveralls Shoes', 8699,  'images/product-5.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike MEN CITY Coveralls Shoes', 8699,'images/product-5.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-6.html"><img src="images/product-6.png"></a>
+                <a href="product-6.html"><h4>Nike Promina Men's Shoes</h4></a><br>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>₹4999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Promina Mens Shoes', 4999, 'images/product-6.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Promina Mens Shoes', 4999,'images/product-6.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-7.html"><img src="images/product-7.png"></a>
+                <a href="product-7.html"><h4>Nike Pegasus 41 Blueprint Road Running Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>₹11999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Pegasus 41 Blueprint Road Running Shoes',11999,'images/product-7.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Pegasus 41 Blueprint Road Running Shoes',11999,'images/product-7.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-8.html"><img src="images/product-8.png"></a>
+                <a href="product-8.html"><h4>Nike Air Jordan 5 Retro Shoes</h4></a><br>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>₹19999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Air Jordan 5 Retro Shoes', 19999,'images/product-8.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Air Jordan 5 Retro Shoes', 19999,'images/product-8.png')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-4">
+                <a href="product-9.html"><img src="images/product-9.png"></a>
+                <a href="product-9.html"><h4>Nike Air Force 1'07</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>₹10999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Air Force 1,07', 10999,'images/product-9.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Air Force 1,07', 10999,'images/product-9.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-10.html"><img src="images/product-10.png"></a>
+                <a href="product-10.html"><h4>Nike Air Max Nuaxis Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>₹8999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Air Max Nuaxis Shoes', 8999,'images/product-10.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Air Max Nuaxis Shoes', 8999,'images/product-10.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-11.html"><img src="images/product-11.png"></a>
+                <a href="product-11.html"><h4>Nike Invincible 3 Mens Shoes </h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>₹16999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Invincible 3 Mens Shoes', 16999,'images/product-11.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Invincible 3 Mens Shoes', 16999,'images/product-11.png')">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <a href="product-12.html"><img src="images/product-12.png"></a>
+                <a href="product-12.html"><h4>Nike Killshot 2 Leather Shoes</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>₹8999</p>
+                <button class="wishlist-btn" onclick="addToWishlist('Nike Killshot 2 Leather Shoes', 8999,'images/product-12.png')">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button class="add-to-cart-btn" onclick="addToCart('Nike Killshot 2 Leather Shoes', 8999,'images/product-12.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div> -->
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App For Android and Ios Mobile Phone.</p>
+                    <div class="app-logo">
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="images/play-store.png">
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="images/app-store.png" alt="App Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo3white.png">
+                    <p>Our Purpose is to sustainably Make the pleasure and benefits of sports accessible to the many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="">Coupons</a></li>
+                        <li><a href="">Blog Post</a></li>
+                        <li><a href="">Return Policy</a></li>
+                        <li><a href="">Join Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/patel_pujan_18/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Skyline Shopper</p>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const productIndex = cart.findIndex(item => item.name === productName);
+
+            if (productIndex > -1) {
+                // If the product is already in the cart, increase the quantity
+                cart[productIndex].quantity += 1;
+            } else {
+                // If the product is not in the cart, add it
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    quantity: 1,
+                    image: productImage // Store the image URL
+                });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} has been added to the cart!`);
+        }
+
+        function addToWishlist(productName, productPrice, productImage) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    // Check if the product already exists in the wishlist
+    const productIndex = wishlist.findIndex(item => item.name === productName);
+
+    if (productIndex === -1) {
+        // Add the product to the wishlist if it doesn't already exist
+        wishlist.push({
+            name: productName,
+            price: productPrice,
+            image: productImage   // Store the image URL here
+        });
+
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        alert(`${productName} has been added to your wishlist!`);
+    } else {
+        alert(`${productName} is already in your wishlist.`);
+    }
+}
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    function menutoggle() {
+        let menu = document.getElementById('MenuItems');
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+});
+
+function menutoggle() {
+            let menu = document.getElementById('MenuItems');
+            menu.classList.toggle('show'); // Toggle the 'show' class
+        }
+
+
+    </script>
+</body>
+</html>
